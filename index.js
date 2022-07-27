@@ -1,6 +1,3 @@
-// Import stylesheets
-import './style.css';
-
 $(document).ready(function () {
   $('#btnPopout').click(function () {
     submit();
