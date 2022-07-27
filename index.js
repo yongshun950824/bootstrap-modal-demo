@@ -3,35 +3,7 @@ import './style.css';
 
 $(document).ready(function () {
   $('#btnPopout').click(function () {
-    console.log('1');
-
-    var data = {
-      successful: false,
-      code: 0,
-      message: 'Create a popup modal with the tags and properties given',
-      data: [
-        {
-          TextColor: '#222',
-          BackgroundColor: '#ff0000',
-          Message: 'This is a sample title 1',
-          Tag: 'h1',
-        },
-        {
-          TextColor: '#fff',
-          BackgroundColor: '#ff0000',
-          Message: 'This is a sample title 2',
-          Tag: 'h2',
-        },
-        {
-          TextColor: '#000',
-          BackgroundColor: '#ff0000',
-          Message: 'This is a sample title 2',
-          Tag: 'p',
-        },
-      ],
-    };
-
-    showModal(data);
+    submit();
   });
 });
 
@@ -42,7 +14,7 @@ function submit() {
     dataType: 'json',
   })
     .done(function (data) {
-      console.log(data);
+      showModal(data);
     })
     .fail(function (err) {
       console.log('error:', err);
